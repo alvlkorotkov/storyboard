@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <title>Раскадровки</title>
+  <style>
+    :root {
+      --ink: #171412;
+      --paper: #f3eee6;
+      --bone: #fffaf0;
+      --ash: #d8d1c8;
+      --blood: #8d1622;
+      --brass: #b88a45;
+      --steel: #53636f;
+      --green: #5f7e55;
+      --muted: #766d62;
+      --line: rgba(23, 20, 18, .16);
+      color-scheme: light;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px clamp(18px, 4vw, 56px);
+      background: rgba(243, 238, 230, .9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 22px;
+      border: 2px solid var(--ink);
+      background:
+        linear-gradient(135deg, transparent 48%, var(--ink) 49% 52%, transparent 53%),
+        radial-gradient(circle at 76% 28%, var(--blood) 0 11%, transparent 12%);
+    }
+
+    nav {
+      display: flex;
+      gap: clamp(12px, 2vw, 26px);
+      color: #4f463b;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    nav a {
+      padding: 8px 0;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88svh;
+      display: flex;
+      align-items: flex-end;
+      color: var(--bone);
+      background:
+        linear-gradient(90deg, rgba(23, 20, 18, .98), rgba(23, 20, 18, .78) 50%, rgba(23, 20, 18, .54)),
+        linear-gradient(145deg, #171412 0%, #2a1c19 44%, #4a1018 100%);
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        repeating-linear-gradient(90deg, rgba(255, 250, 240, .045) 0 1px, transparent 1px 86px),
+        repeating-linear-gradient(0deg, rgba(255, 250, 240, .035) 0 1px, transparent 1px 52px);
+      mix-blend-mode: screen;
+      opacity: .7;
+    }
+
+    .hero-copy {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: clamp(74px, 9vw, 128px) 0 clamp(34px, 5vw, 66px);
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: var(--brass);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(64px, 12vw, 168px);
+      line-height: .86;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 28px 0 0;
+      color: #efe5d5;
+      font-size: clamp(19px, 2vw, 28px);
+      line-height: 1.32;
+      font-weight: 650;
+    }
+
+    section {
+      padding: clamp(70px, 9vw, 128px) clamp(18px, 5vw, 64px);
+    }
+
+    .intro {
+      padding-top: clamp(70px, 9vw, 128px);
+      background: var(--paper);
+    }
+
+    .section-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(220px, .45fr) minmax(0, .55fr);
+      gap: clamp(28px, 5vw, 74px);
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blood);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5.8vw, 82px);
+      line-height: .96;
+      letter-spacing: 0;
+    }
+
+    .lede {
+      margin: 0;
+      color: #3f3932;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.45;
+      font-weight: 650;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .metric {
+      min-height: 142px;
+      padding: 22px;
+      background: #fbf7ee;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: .9;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .test-frame {
+      background: #fbf7ee;
+    }
+
+    .storyboard-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(23, 20, 18, .14);
+    }
+
+    .storyboard-table th,
+    .storyboard-table td {
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .storyboard-table th {
+      color: #efe5d5;
+      background: #171412;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .storyboard-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .storyboard-visual {
+      width: min(680px, 100%);
+      margin: 0;
+      background: #fdfbf6;
+      border: 1px solid rgba(23, 20, 18, .2);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .storyboard-visual img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .frame-info {
+      min-width: 280px;
+    }
+
+    .frame-info h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1;
+    }
+
+    .frame-info p {
+      margin: 0;
+      color: #4b433b;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .frame-meta {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .frame-meta div {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      color: #3d362f;
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .frame-meta span {
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .dark {
+      background: var(--ink);
+      color: var(--bone);
+    }
+
+    .dark .eyebrow {
+      color: var(--brass);
+    }
+
+    .dark .lede {
+      color: #e4d9c8;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .characters {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      min-height: 280px;
+      padding: 22px;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .dark .card {
+      background: rgba(255, 250, 240, .075);
+      border-color: rgba(255, 250, 240, .16);
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .card p {
+      margin: 0;
+      color: #4b433b;
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .dark .card p {
+      color: #e4d8c7;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 9px;
+      border: 1px solid rgba(23, 20, 18, .18);
+      border-radius: 999px;
+      color: #352f29;
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .dark .tag {
+      border-color: rgba(255, 250, 240, .24);
+      color: #f2e6d5;
+    }
+
+    .locations {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .location {
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      border-radius: 8px;
+      color: var(--bone);
+      background:
+        linear-gradient(0deg, rgba(23, 20, 18, .94), rgba(23, 20, 18, .52)),
+        linear-gradient(135deg, var(--tone-a), var(--tone-b));
+      overflow: hidden;
+    }
+
+    .location h3 {
+      margin: 0 0 9px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .location p {
+      margin: 0;
+      color: #f0e4d2;
+      line-height: 1.45;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .swatch {
+      min-height: 138px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      border: 1px solid rgba(255, 250, 240, .14);
+      border-radius: 8px;
+      background: var(--swatch);
+      color: var(--label, var(--bone));
+    }
+
+    .swatch b {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .swatch span {
+      font-size: 13px;
+      font-weight: 800;
+      opacity: .86;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(320px, 1.08fr);
+      gap: clamp(24px, 5vw, 74px);
+      align-items: start;
+    }
+
+    .rules {
+      display: grid;
+      gap: 12px;
+    }
+
+    .rule {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .rule:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rule b {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .rule p {
+      margin: 0;
+      color: #4c443c;
+      line-height: 1.55;
+    }
+
+    .camera-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .camera-note {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .camera-note b {
+      color: var(--blood);
+      font-size: 13px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .camera-note span {
+      display: block;
+      color: #3d362f;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .prompt {
+      padding: 26px;
+      background: #11100e;
+      color: #f5ead9;
+      border-radius: 8px;
+      box-shadow: inset 0 0 0 1px rgba(255, 250, 240, .12);
+    }
+
+    .prompt h3 {
+      margin: 0 0 14px;
+      color: var(--brass);
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .prompt p {
+      margin: 0;
+      color: #f3e8d8;
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .scene-map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .scene {
+      padding: 18px;
+      background: #fbf7ee;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .scene b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blood);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .scene span {
+      display: block;
+      color: #3d362f;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .footer {
+      padding: 34px clamp(18px, 5vw, 64px);
+      background: #0f0d0c;
+      color: #d9cbb9;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .footer-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 82svh;
+      }
+
+      .metrics,
+      .characters,
+      .locations,
+      .palette,
+      .scene-map,
+      .section-head,
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-head,
+      .two-col {
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        padding-inline: 16px;
+      }
+
+      .hero {
+        min-height: 78svh;
+        background-position: 58% 30%;
+      }
+
+      .metrics,
+      .characters,
+      .locations,
+      .palette,
+      .scene-map,
+      .section-head,
+      .two-col,
+      .camera-board {
+        grid-template-columns: 1fr;
+      }
+
+      .storyboard-table,
+      .storyboard-table thead,
+      .storyboard-table tbody,
+      .storyboard-table tr,
+      .storyboard-table th,
+      .storyboard-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .storyboard-table th:nth-child(2) {
+        display: none;
+      }
+
+      .intro {
+        padding-top: 76px;
+      }
+
+      .location {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Главная страница раскадровок">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Визуальная библия</span>
+    </a>
+    <nav aria-label="Разделы страницы">
+      <a href="#characters">Персонажи</a>
+      <a href="#locations">Локации</a>
+      <a href="#camera">Камера</a>
+      <a href="#prompts">Промпты</a>
+      <a href="#scenes">Сцены</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="kicker">Визуальная библия для ИИ-раскадровок</p>
+        <h1 id="page-title">Раскадровки</h1>
+        <p class="subtitle">Рабочий визуальный язык для камерной хоррор-комедии о еде, вине, старых деньгах, полицейском люминесцентном свете и хищном свечном мраке.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ДНК рабочей книги</p>
+            <h2>У фильма уже есть скелет кадров.</h2>
+          </div>
+          <p class="lede">Excel-файл уже содержит режиссёрско-операторский сценарий по сценам. Эта библия переводит структуру в повторяемые визуальные решения для генерации новых собственных кадров и производственных презентаций.</p>
+        </div>
+
+        <div class="metrics" aria-label="Сводка рабочей книги">
+          <div class="metric"><strong>16</strong><span>Листов в книге</span></div>
+          <div class="metric"><strong>ИИ</strong><span>Вспомогательный проход раскадровок</span></div>
+          <div class="metric"><strong>11</strong><span>Основных сцен</span></div>
+          <div class="metric"><strong>4</strong><span>Ключевые локации</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="first-frame">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Первый тестовый пакет</p>
+            <h2>Первые 5 кадров. Кабинет следователя.</h2>
+          </div>
+          <p class="lede">Классическая раскадровка по первым пяти кадрам из пайплайна: функциональная схема композиции, движения камеры, мизансцены и ключевых деталей без концепт-рендера.</p>
+        </div>
+
+        <table class="storyboard-table">
+          <thead>
+            <tr>
+              <th>Визуализация</th>
+              <th>Номер кадра и что это за кадр</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-001-storyboard.png" alt="Классическая раскадровка первого кадра: кабинет следователя, часы, детский рисунок, стрелка движения камеры к следователю.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 1</h3>
+                <p>Отъезд от деталей стены к следователю за столом. Кадр заявляет часы, детский рисунок, календарь, грамоты, мусор и бытовой беспорядок, затем переводит внимание к следователю: он ест, печатает и пьёт чай.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>классическая раскадровка</span></div>
+                  <div>Камера <span>от стены к столу</span></div>
+                  <div>Крупность <span>от детали к среднему общему</span></div>
+                  <div>Статус <span>черновой ИИ-проход</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-002-storyboard.png" alt="Классическая раскадровка второго кадра: бумажка летит в переполненное мусорное ведро.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 2</h3>
+                <p>Бумажка, брошенная следователем, летит в сторону переполненного мусорного ведра. Кадр фиксирует бытовой хаос кабинета: мусор, одноразовая посуда, смятые бумаги и грязный пол.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>инсерт действия</span></div>
+                  <div>Камера <span>статичный акцент</span></div>
+                  <div>Крупность <span>деталь / средняя деталь</span></div>
+                  <div>Статус <span>черновой ИИ-проход</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-003-storyboard.png" alt="Классическая раскадровка третьего кадра: следователь передаёт паспорт Коле через стол.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 3</h3>
+                <p>Общий боковой план разговора. Следователь передаёт Коле паспорт через стол, Коля аккуратно принимает его и готовится убрать в файл или рюкзак. Кадр задаёт географию допроса.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>общий разговорный план</span></div>
+                  <div>Камера <span>боковая точка</span></div>
+                  <div>Крупность <span>общий / средний общий</span></div>
+                  <div>Статус <span>черновой ИИ-проход</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-004-storyboard.png" alt="Классическая раскадровка четвёртого кадра: план на следователя в разговорной восьмёрке.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 4</h3>
+                <p>Разговорная восьмёрка: план на следователя. Он сидит за столом, раздражённо ведёт разговор с Колей, перед ним ноутбук, кружка, бумаги, сэндвич и рабочий беспорядок.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>восьмёрка</span></div>
+                  <div>Камера <span>на следователя</span></div>
+                  <div>Крупность <span>средний / средне-крупный</span></div>
+                  <div>Статус <span>черновой ИИ-проход</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-005-storyboard.png" alt="Классическая раскадровка пятого кадра: план на Колю в разговорной восьмёрке.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 5</h3>
+                <p>Разговорная восьмёрка: план на Колю. Он аккуратен, зажат и слегка обижен, держит себя сдержанно напротив следователя. В кадре читаются рюкзак, файл и дистанция между ним и столом.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>восьмёрка</span></div>
+                  <div>Камера <span>на Колю</span></div>
+                  <div>Крупность <span>средний / средне-крупный</span></div>
+                  <div>Статус <span>черновой ИИ-проход</span></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="test-frame" id="second-style">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Второй стиль-проход</p>
+            <h2>Те же 5 кадров. Более рабочая схема.</h2>
+          </div>
+          <p class="lede">Версия v2 упрощает рисунок, снижает портретность и делает акцент на раскадровочной функции: мини-панели, блокинг, траектории движения и чистую читаемость кадра.</p>
+        </div>
+
+        <table class="storyboard-table">
+          <thead>
+            <tr>
+              <th>Визуализация</th>
+              <th>Номер кадра и что это за кадр</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-001-storyboard-v2.png" alt="Раскадровка v2 первого кадра: три мини-панели, часы, детский рисунок, следователь в кабинете.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 1 · v2</h3>
+                <p>Отъезд разложен на три фазы: часы, детский рисунок, затем следователь за столом. Такой вариант точнее передаёт логику движения камеры внутри одного сложного кадра.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>мини-панели внутри кадра</span></div>
+                  <div>Камера <span>часы → рисунок → стол</span></div>
+                  <div>Крупность <span>от детали к общему</span></div>
+                  <div>Статус <span>v2 · рабочая схема</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-002-storyboard-v2.png" alt="Раскадровка v2 второго кадра: бумажка летит в переполненное ведро.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 2 · v2</h3>
+                <p>Более чистый инсерт: бумажка летит в переполненное ведро. В кадре оставлены только траектория, ведро, край стола и мусор как смысловая фактура.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>инсерт действия</span></div>
+                  <div>Камера <span>статичный акцент</span></div>
+                  <div>Крупность <span>деталь</span></div>
+                  <div>Статус <span>v2 · рабочая схема</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-003-storyboard-v2.png" alt="Раскадровка v2 третьего кадра: следователь передаёт паспорт Коле в боковом общем плане.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 3 · v2</h3>
+                <p>Общий боковой план стал более схематичным: две фигуры, стол между ними, паспорт как главное действие, стрелка передачи и читаемая география кабинета.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>общий разговорный план</span></div>
+                  <div>Камера <span>боковая точка</span></div>
+                  <div>Крупность <span>средний общий</span></div>
+                  <div>Статус <span>v2 · рабочая схема</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-004-storyboard-v2.png" alt="Раскадровка v2 четвёртого кадра: план на следователя в разговорной восьмёрке.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 4 · v2</h3>
+                <p>Разговорная восьмёрка на следователя без большой стрелки: важнее направление взгляда, плечо Коли на переднем плане, стол и рабочий беспорядок.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>восьмёрка</span></div>
+                  <div>Камера <span>на следователя</span></div>
+                  <div>Крупность <span>средний / средне-крупный</span></div>
+                  <div>Статус <span>v2 · рабочая схема</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="storyboard-visual">
+                  <img src="assets/storyboards/generated/scene-01-shot-005-storyboard-v2.png" alt="Раскадровка v2 пятого кадра: план на Колю в разговорной восьмёрке.">
+                </figure>
+              </td>
+              <td class="frame-info">
+                <h3>Сцена 1 · Кадр 5 · v2</h3>
+                <p>Разговорная восьмёрка на Колю: сдержанная поза, рюкзак и файл рядом, следователь как силуэт переднего плана. Кадр делает акцент на дистанции между ними.</p>
+                <div class="frame-meta">
+                  <div>Тип <span>восьмёрка</span></div>
+                  <div>Камера <span>на Колю</span></div>
+                  <div>Крупность <span>средний / средне-крупный</span></div>
+                  <div>Статус <span>v2 · рабочая схема</span></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="characters" class="dark">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Библия персонажей</p>
+            <h2>Каждого задаёт его аппетит.</h2>
+          </div>
+          <p class="lede">Каждый персонаж должен читаться сначала как силуэт, а затем как моральное давление. Визуально держим их приземлёнными, узнаваемо российскими и без глянца.</p>
+        </div>
+
+        <div class="grid characters">
+          <article class="card">
+            <h3>Коля</h3>
+            <p>Двадцать четыре, точный, аккуратный, напряжённый. Его пластика принадлежит молодому повару, который пытается быть незаметным, пока контроль не превращается в удовольствие. Руки критически важны: пластырь, нож, поднос, перчатки, кровь.</p>
+            <div class="tags"><span class="tag">нервная элегантность</span><span class="tag">руки повара</span><span class="tag">скрытая ярость</span></div>
+          </article>
+          <article class="card">
+            <h3>Следователь</h3>
+            <p>Около сорока пяти, уставшая власть, тонкие очки, вокруг него офисно-пищевой распад. Он смешон, потому что слишком человеческий: чай, сэндвич, крошки, бумаги и кружка с нежной надписью в комнате, где всё говорит о гниении.</p>
+            <div class="tags"><span class="tag">бюрократический бардак</span><span class="tag">жирный реализм</span><span class="tag">мотив часов</span></div>
+          </article>
+          <article class="card">
+            <h3>Дмитрий</h3>
+            <p>Хозяин старого мира, собранный и опасный. В его неподвижности должно быть больше скорости, чем в движении. Костюм аристократичный, но потёртый: человек, которого сохраняет не комфорт, а ритуал.</p>
+            <div class="tags"><span class="tag">сдержанный хищник</span><span class="tag">бархатная тень</span><span class="tag">ритуальный контроль</span></div>
+          </article>
+          <article class="card">
+            <h3>Соня</h3>
+            <p>Элегантная, голодная, почти нежная до обращения. Трансформация начинается с пальцев и глаз раньше, чем с пасти: ужас должен оставаться интимным и физическим.</p>
+            <div class="tags"><span class="tag">сначала когти</span><span class="tag">мягкая угроза</span><span class="tag">близкий контакт</span></div>
+          </article>
+          <article class="card">
+            <h3>Лука</h3>
+            <p>Присутствие книги и трости. Он двигается как учёный, который пережил любую комнату, в которую входит. Используем его для вертикалей, пауз и старой интеллектуальной надменности.</p>
+            <div class="tags"><span class="tag">трость</span><span class="tag">книга</span><span class="tag">старый интеллект</span></div>
+          </article>
+          <article class="card">
+            <h3>Яков, Филипп, Граф</h3>
+            <p>Яков раскрывается в грубую силу, Филипп в жажду, Граф в абсурдную власть. Кот не милое украшение: он невозмутимый свидетель и ритуальный переключатель.</p>
+            <div class="tags"><span class="tag">клыки</span><span class="tag">комический ужас</span><span class="tag">кот-свидетель</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Библия локаций</p>
+            <h2>Четыре комнаты, четыре типа давления.</h2>
+          </div>
+          <p class="lede">Локации должны быть фактурными и читаться даже в маленьких превью: кабинетный хаос, кухонная дисциплина, ритуал зала, холодное послесловие морга.</p>
+        </div>
+
+        <div class="grid locations">
+          <article class="location" style="--tone-a:#53636f; --tone-b:#171412">
+            <h3>Кабинет следователя</h3>
+            <p>Низкий потолок, башни бумаг, настенные часы, детский рисунок, грамоты, грязные остатки еды, мёртвый люминесцентный воздух.</p>
+          </article>
+          <article class="location" style="--tone-a:#b88a45; --tone-b:#2a1c19">
+            <h3>Кухня</h3>
+            <p>Контролируемый закат, чистые поверхности, руки в ритуальном движении, еда как ремесло до того, как станет уликой.</p>
+          </article>
+          <article class="location" style="--tone-a:#8d1622; --tone-b:#171412">
+            <h3>Зал</h3>
+            <p>Свечи, тяжёлые шторы, овальный стол, портреты, тёмные коридоры, старая мебель, кот как центр тяжести.</p>
+          </article>
+          <article class="location" style="--tone-a:#d8d1c8; --tone-b:#53636f">
+            <h3>Морг</h3>
+            <p>Холодная неподвижность, простыни, бирки, клиническая геометрия и финальный абсурдный бит воскресения.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" aria-labelledby="palette-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Цветовая система</p>
+            <h2 id="palette-title">Кровь редкая, не декоративная.</h2>
+          </div>
+          <p class="lede">Палитра движется между затхлым ведомственным светом и тёплой аристократической темнотой. Красный здесь событие сюжета, а не фон.</p>
+        </div>
+
+        <div class="palette">
+          <div class="swatch" style="--swatch:#171412"><b>Жжёные чернила</b><span>#171412</span></div>
+          <div class="swatch" style="--swatch:#fffaf0; --label:#171412"><b>Костяная бумага</b><span>#fffaf0</span></div>
+          <div class="swatch" style="--swatch:#8d1622"><b>Сигнал крови</b><span>#8d1622</span></div>
+          <div class="swatch" style="--swatch:#b88a45; --label:#171412"><b>Свечная латунь</b><span>#b88a45</span></div>
+          <div class="swatch" style="--swatch:#53636f"><b>Полицейская сталь</b><span>#53636f</span></div>
+          <div class="swatch" style="--swatch:#5f7e55"><b>Гнилая зелень</b><span>#5f7e55</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="camera">
+      <div class="section-inner two-col">
+        <div>
+          <p class="eyebrow">Грамматика камеры</p>
+          <h2>Кадр ведёт себя как аппетит.</h2>
+          <div class="rules">
+            <div class="rule">
+              <b>Кабинет</b>
+              <p>Начинать с предметов и скользить к людям: часы, рисунок, мусор, сэндвич, рука, лицо. Движение камеры должно ощущаться как обнаружение улики.</p>
+            </div>
+            <div class="rule">
+              <b>Кухня</b>
+              <p>Верхние точки, крупные руки, контролируемые панорамы, чистая геометрия. Готовка остаётся хореографией до момента, когда в смесь попадает кровь.</p>
+            </div>
+            <div class="rule">
+              <b>Зал</b>
+              <p>Широкие ритуальные композиции, внезапные хищные наезды и мизансцена вокруг овального стола. Углы держать достаточно тёмными, чтобы дом казался больше кадра.</p>
+            </div>
+            <div class="rule">
+              <b>Превращения</b>
+              <p>Раскрывать через детали: зрачки, пальцы, зубы, касание плеча, тело, входящее в кадр слишком быстро. Первый испуг анатомический, а не взрывной.</p>
+            </div>
+          </div>
+        </div>
+        <div class="camera-board" aria-label="Камерные опорные правила">
+          <div class="camera-note"><b>01</b><span>Предмет ведёт к человеку</span></div>
+          <div class="camera-note"><b>02</b><span>Еда становится уликой</span></div>
+          <div class="camera-note"><b>03</b><span>Стол держит географию сцены</span></div>
+          <div class="camera-note"><b>04</b><span>Ужас начинается с детали</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompts" class="dark">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ДНК промптов</p>
+            <h2>Повторяемый каркас генерации.</h2>
+          </div>
+          <p class="lede">Эти блоки можно использовать как постоянный слой для каждой генерируемой раскадровки, а затем добавлять сцену, крупность, мизансцену и действие из строки Excel.</p>
+        </div>
+
+        <div class="grid characters">
+          <article class="prompt">
+            <h3>Базовый стиль</h3>
+            <p>Российская камерная хоррор-комедия, приземлённый кинематографический реализм, черновая производственная раскадровка, переведённая в аккуратный чёрно-белый концепт-кадр, фактурные интерьеры, выразительная мизансцена, практический свет, видимый моральный распад, без глянцевого фэнтези.</p>
+          </article>
+          <article class="prompt">
+            <h3>Промпт кабинета</h3>
+            <p>Тесный кабинет следователя, захламлённый стол, старые бумаги, переполненная мусорка, настенные часы застряли перед полуночью, детский рисунок, дешёвая кружка с чаем, тонкий люминесцентный свет, следователь ест во время работы, тревожная процедурная комедия.</p>
+          </article>
+          <article class="prompt">
+            <h3>Промпт зала</h3>
+            <p>Старый аристократический зал ночью, овальный стол при свечах, тяжёлые шторы, пыльные портреты великих мыслителей, красная жидкость в бокалах, присутствие кота-сфинкса, элегантные гости медленно становятся хищниками.</p>
+          </article>
+          <article class="prompt">
+            <h3>Промпт кухни</h3>
+            <p>Точный молодой повар готовит красивые блюда на закате, крупно руки, нож, металлическая миска, кондитерская масса, контролируемая симметрия, тёплый свет сужается с наступлением ночи, еда становится ритуальной уликой.</p>
+          </article>
+          <article class="prompt">
+            <h3>Промпт превращения</h3>
+            <p>Тонкая вампирская трансформация, увеличенные зрачки, появляющиеся клыки, пальцы вытягиваются в когти, голод заменяет манеры, интимный боди-хоррор, читаемый силуэт, сдержанная кровь, психологическое давление.</p>
+          </article>
+          <article class="prompt">
+            <h3>Негативный слой</h3>
+            <p>Без супергеройской стилистики, неонового киберпанка, чистого люксового ресторана, типового замка, комиксной заставочной страницы, чрезмерной крови, случайного современного брендинга и глянцевой модной съёмки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenes">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Карта сцен</p>
+            <h2>Приоритеты раскадровки.</h2>
+          </div>
+          <p class="lede">Первый проход генерации стоит направить на биты с сильным визуальным контрастом, практической производственной ценностью или риском по визуальным эффектам.</p>
+        </div>
+
+        <div class="scene-map">
+          <div class="scene"><b>Сцена 1</b><span>Часы, детский рисунок, кабинет следователя, Коля под давлением.</span></div>
+          <div class="scene"><b>Сцена 2</b><span>Кухонная точность, приготовление блюд, закат превращается в ночь.</span></div>
+          <div class="scene"><b>Сцена 3</b><span>Приход в зал, раскрытие подноса, география стола.</span></div>
+          <div class="scene"><b>Сцена 4</b><span>Ритуал красного напитка, гости вокруг овального стола.</span></div>
+          <div class="scene"><b>Сцена 7</b><span>Порезанный палец, кровь в смеси, рождение идеи Коли.</span></div>
+          <div class="scene"><b>Сцена 8</b><span>Обращение вампиров, когти Сони, скорость Дмитрия, столкновение со столом.</span></div>
+          <div class="scene"><b>Сцена 9</b><span>Следователь отравлен конфетами, комедия признания.</span></div>
+          <div class="scene"><b>Сцена 11</b><span>Воскрешение в морге, Граф как невозмутимый триггер.</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Визуальная библия раскадровок</span>
+      <span>Собрано на основе режиссёрско-операторской рабочей книги</span>
+    </div>
+  </footer>
+</body>
+</html>
