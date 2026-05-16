@@ -235,6 +235,7 @@
 
     .storyboard-table {
       width: 100%;
+      table-layout: fixed;
       border-collapse: separate;
       border-spacing: 0;
       background: #fffaf0;
@@ -265,8 +266,18 @@
       border-bottom: 0;
     }
 
+    .storyboard-table th:first-child,
+    .storyboard-table td:first-child {
+      width: 66%;
+    }
+
+    .storyboard-table th:nth-child(2),
+    .storyboard-table td:nth-child(2) {
+      width: 34%;
+    }
+
     .storyboard-visual {
-      width: min(680px, 100%);
+      width: 100%;
       margin: 0;
       background: #fdfbf6;
       border: 1px solid rgba(23, 20, 18, .2);
