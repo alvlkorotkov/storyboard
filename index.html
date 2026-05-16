@@ -233,47 +233,21 @@
       background: #fbf7ee;
     }
 
-    .storyboard-table {
-      width: 100%;
-      table-layout: fixed;
-      border-collapse: separate;
-      border-spacing: 0;
+    .storyboard-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .storyboard-card {
+      display: grid;
+      grid-template-columns: minmax(420px, .47fr) minmax(0, .53fr);
+      gap: clamp(24px, 3vw, 42px);
+      align-items: stretch;
+      padding: 12px;
       background: #fffaf0;
       border: 1px solid var(--line);
       border-radius: 8px;
-      overflow: hidden;
       box-shadow: 0 24px 70px rgba(23, 20, 18, .14);
-    }
-
-    .storyboard-table th,
-    .storyboard-table td {
-      padding: 18px;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
-      text-align: left;
-    }
-
-    .storyboard-table th {
-      color: #efe5d5;
-      background: #171412;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .storyboard-table tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .storyboard-table th:first-child,
-    .storyboard-table td:first-child {
-      width: 66%;
-    }
-
-    .storyboard-table th:nth-child(2),
-    .storyboard-table td:nth-child(2) {
-      width: 34%;
     }
 
     .storyboard-visual {
@@ -297,41 +271,49 @@
     }
 
     .frame-info {
-      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+      padding: clamp(10px, 2vw, 28px) clamp(12px, 2vw, 30px) clamp(12px, 2vw, 30px) 0;
     }
 
     .frame-info h3 {
-      margin: 0 0 12px;
+      margin: 0 0 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(26px, 3vw, 38px);
-      line-height: 1;
+      font-size: clamp(46px, 5.2vw, 82px);
+      line-height: .9;
     }
 
     .frame-info p {
       margin: 0;
       color: #4b433b;
-      font-size: 15px;
-      line-height: 1.6;
+      font-size: clamp(17px, 1.55vw, 25px);
+      line-height: 1.45;
     }
 
     .frame-meta {
       display: grid;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 0;
+      margin-top: clamp(28px, 4vw, 44px);
     }
 
     .frame-meta div {
       display: flex;
       justify-content: space-between;
       gap: 18px;
-      padding-bottom: 10px;
+      padding: 13px 0;
       border-bottom: 1px solid var(--line);
       color: #3d362f;
-      font-size: 13px;
-      font-weight: 850;
+      font-size: clamp(14px, 1.35vw, 23px);
+      font-weight: 950;
       line-height: 1.35;
       text-transform: uppercase;
       letter-spacing: .04em;
+    }
+
+    .frame-meta div:first-child {
+      border-top: 1px solid var(--line);
     }
 
     .frame-meta span {
@@ -633,7 +615,8 @@
       .palette,
       .scene-map,
       .section-head,
-      .two-col {
+      .two-col,
+      .storyboard-card {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -660,22 +643,17 @@
       .scene-map,
       .section-head,
       .two-col,
-      .camera-board {
+      .camera-board,
+      .storyboard-card {
         grid-template-columns: 1fr;
       }
 
-      .storyboard-table,
-      .storyboard-table thead,
-      .storyboard-table tbody,
-      .storyboard-table tr,
-      .storyboard-table th,
-      .storyboard-table td {
-        display: block;
-        width: 100%;
+      .storyboard-card {
+        padding: 10px;
       }
 
-      .storyboard-table th:nth-child(2) {
-        display: none;
+      .frame-info {
+        padding: 8px 4px 4px;
       }
 
       .intro {
@@ -741,111 +719,7 @@
           <p class="lede">Классическая раскадровка по первым пяти кадрам из пайплайна: функциональная схема композиции, движения камеры, мизансцены и ключевых деталей без концепт-рендера.</p>
         </div>
 
-        <table class="storyboard-table">
-          <thead>
-            <tr>
-              <th>Визуализация</th>
-              <th>Номер кадра и что это за кадр</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-001-storyboard.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-001-storyboard.jpg" loading="lazy" decoding="async" alt="Классическая раскадровка первого кадра: кабинет следователя, часы, детский рисунок, стрелка движения камеры к следователю.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 1</h3>
-                <p>Отъезд от деталей стены к следователю за столом. Кадр заявляет часы, детский рисунок, календарь, грамоты, мусор и бытовой беспорядок, затем переводит внимание к следователю: он ест, печатает и пьёт чай.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>классическая раскадровка</span></div>
-                  <div>Камера <span>от стены к столу</span></div>
-                  <div>Крупность <span>от детали к среднему общему</span></div>
-                  <div>Статус <span>черновой ИИ-проход</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-002-storyboard.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-002-storyboard.jpg" loading="lazy" decoding="async" alt="Классическая раскадровка второго кадра: бумажка летит в переполненное мусорное ведро.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 2</h3>
-                <p>Бумажка, брошенная следователем, летит в сторону переполненного мусорного ведра. Кадр фиксирует бытовой хаос кабинета: мусор, одноразовая посуда, смятые бумаги и грязный пол.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>инсерт действия</span></div>
-                  <div>Камера <span>статичный акцент</span></div>
-                  <div>Крупность <span>деталь / средняя деталь</span></div>
-                  <div>Статус <span>черновой ИИ-проход</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-003-storyboard.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-003-storyboard.jpg" loading="lazy" decoding="async" alt="Классическая раскадровка третьего кадра: следователь передаёт паспорт Коле через стол.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 3</h3>
-                <p>Общий боковой план разговора. Следователь передаёт Коле паспорт через стол, Коля аккуратно принимает его и готовится убрать в файл или рюкзак. Кадр задаёт географию допроса.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>общий разговорный план</span></div>
-                  <div>Камера <span>боковая точка</span></div>
-                  <div>Крупность <span>общий / средний общий</span></div>
-                  <div>Статус <span>черновой ИИ-проход</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-004-storyboard.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-004-storyboard.jpg" loading="lazy" decoding="async" alt="Классическая раскадровка четвёртого кадра: план на следователя в разговорной восьмёрке.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 4</h3>
-                <p>Разговорная восьмёрка: план на следователя. Он сидит за столом, раздражённо ведёт разговор с Колей, перед ним ноутбук, кружка, бумаги, сэндвич и рабочий беспорядок.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>восьмёрка</span></div>
-                  <div>Камера <span>на следователя</span></div>
-                  <div>Крупность <span>средний / средне-крупный</span></div>
-                  <div>Статус <span>черновой ИИ-проход</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-005-storyboard.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-005-storyboard.jpg" loading="lazy" decoding="async" alt="Классическая раскадровка пятого кадра: план на Колю в разговорной восьмёрке.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 5</h3>
-                <p>Разговорная восьмёрка: план на Колю. Он аккуратен, зажат и слегка обижен, держит себя сдержанно напротив следователя. В кадре читаются рюкзак, файл и дистанция между ним и столом.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>восьмёрка</span></div>
-                  <div>Камера <span>на Колю</span></div>
-                  <div>Крупность <span>средний / средне-крупный</span></div>
-                  <div>Статус <span>черновой ИИ-проход</span></div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="storyboard-list" data-storyboard-group="v1"></div>
       </div>
     </section>
 
@@ -859,111 +733,7 @@
           <p class="lede">Версия v2 упрощает рисунок, снижает портретность и делает акцент на раскадровочной функции: мини-панели, блокинг, траектории движения и чистую читаемость кадра.</p>
         </div>
 
-        <table class="storyboard-table">
-          <thead>
-            <tr>
-              <th>Визуализация</th>
-              <th>Номер кадра и что это за кадр</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-001-storyboard-v2.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-001-storyboard-v2.jpg" loading="lazy" decoding="async" alt="Раскадровка v2 первого кадра: три мини-панели, часы, детский рисунок, следователь в кабинете.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 1 · v2</h3>
-                <p>Отъезд разложен на три фазы: часы, детский рисунок, затем следователь за столом. Такой вариант точнее передаёт логику движения камеры внутри одного сложного кадра.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>мини-панели внутри кадра</span></div>
-                  <div>Камера <span>часы → рисунок → стол</span></div>
-                  <div>Крупность <span>от детали к общему</span></div>
-                  <div>Статус <span>v2 · рабочая схема</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-002-storyboard-v2.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-002-storyboard-v2.jpg" loading="lazy" decoding="async" alt="Раскадровка v2 второго кадра: бумажка летит в переполненное ведро.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 2 · v2</h3>
-                <p>Более чистый инсерт: бумажка летит в переполненное ведро. В кадре оставлены только траектория, ведро, край стола и мусор как смысловая фактура.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>инсерт действия</span></div>
-                  <div>Камера <span>статичный акцент</span></div>
-                  <div>Крупность <span>деталь</span></div>
-                  <div>Статус <span>v2 · рабочая схема</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-003-storyboard-v2.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-003-storyboard-v2.jpg" loading="lazy" decoding="async" alt="Раскадровка v2 третьего кадра: следователь передаёт паспорт Коле в боковом общем плане.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 3 · v2</h3>
-                <p>Общий боковой план стал более схематичным: две фигуры, стол между ними, паспорт как главное действие, стрелка передачи и читаемая география кабинета.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>общий разговорный план</span></div>
-                  <div>Камера <span>боковая точка</span></div>
-                  <div>Крупность <span>средний общий</span></div>
-                  <div>Статус <span>v2 · рабочая схема</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-004-storyboard-v2.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-004-storyboard-v2.jpg" loading="lazy" decoding="async" alt="Раскадровка v2 четвёртого кадра: план на следователя в разговорной восьмёрке.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 4 · v2</h3>
-                <p>Разговорная восьмёрка на следователя без большой стрелки: важнее направление взгляда, плечо Коли на переднем плане, стол и рабочий беспорядок.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>восьмёрка</span></div>
-                  <div>Камера <span>на следователя</span></div>
-                  <div>Крупность <span>средний / средне-крупный</span></div>
-                  <div>Статус <span>v2 · рабочая схема</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <figure class="storyboard-visual">
-                  <a href="assets/storyboards/generated/scene-01-shot-005-storyboard-v2.png" target="_blank" rel="noopener">
-                    <img src="assets/storyboards/thumbnails/scene-01-shot-005-storyboard-v2.jpg" loading="lazy" decoding="async" alt="Раскадровка v2 пятого кадра: план на Колю в разговорной восьмёрке.">
-                  </a>
-                </figure>
-              </td>
-              <td class="frame-info">
-                <h3>Сцена 1 · Кадр 5 · v2</h3>
-                <p>Разговорная восьмёрка на Колю: сдержанная поза, рюкзак и файл рядом, следователь как силуэт переднего плана. Кадр делает акцент на дистанции между ними.</p>
-                <div class="frame-meta">
-                  <div>Тип <span>восьмёрка</span></div>
-                  <div>Камера <span>на Колю</span></div>
-                  <div>Крупность <span>средний / средне-крупный</span></div>
-                  <div>Статус <span>v2 · рабочая схема</span></div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="storyboard-list" data-storyboard-group="v2"></div>
       </div>
     </section>
 
@@ -1167,5 +937,51 @@
       <span>Собрано на основе режиссёрско-операторской рабочей книги</span>
     </div>
   </footer>
+  <script>
+    const escapeHtml = (value) => String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+
+    const renderFrame = (frame) => {
+      const metaRows = Object.entries(frame.meta).map(([label, value]) => (
+        `<div>${escapeHtml(label)} <span>${escapeHtml(value)}</span></div>`
+      )).join("");
+
+      return `
+        <article class="storyboard-card">
+          <figure class="storyboard-visual">
+            <a href="${escapeHtml(frame.image)}" target="_blank" rel="noopener">
+              <img src="${escapeHtml(frame.thumbnail)}" loading="lazy" decoding="async" alt="${escapeHtml(frame.alt)}">
+            </a>
+          </figure>
+          <div class="frame-info">
+            <h3>${escapeHtml(frame.title)}</h3>
+            <p>${escapeHtml(frame.description)}</p>
+            <div class="frame-meta">${metaRows}</div>
+          </div>
+        </article>
+      `;
+    };
+
+    async function initStoryboards() {
+      const response = await fetch("storyboards.json?v=cards-json");
+      const data = await response.json();
+
+      data.groups.forEach((group) => {
+        const target = document.querySelector(`[data-storyboard-group="${group.id}"]`);
+        if (target) {
+          target.innerHTML = group.frames.map(renderFrame).join("");
+        }
+      });
+    }
+
+    initStoryboards().catch((error) => {
+      document.querySelectorAll(".storyboard-list").forEach((target) => {
+        target.innerHTML = `<article class="storyboard-card"><div class="frame-info"><h3>Не удалось загрузить storyboards.json</h3><p>${escapeHtml(error.message)}</p></div></article>`;
+      });
+    });
+  </script>
 </body>
 </html>
