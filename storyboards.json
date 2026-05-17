@@ -465,6 +465,45 @@
           }
         },
         {
+          "title": "Сцена 3 · Кадр 6,1",
+          "description": "входит КОТ ГРАФ",
+          "image": "assets/storyboards/generated/scene-03-shot-006-1-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-006-1-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 6,1: Кот Граф входит в пятно света.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "нижняя точка у пола",
+            "крупность": "средний на кота",
+            "статус": "детализация кадра 6"
+          }
+        },
+        {
+          "title": "Сцена 3 · Кадр 6,2",
+          "description": "садится и мяукает",
+          "image": "assets/storyboards/generated/scene-03-shot-006-2-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-006-2-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 6,2: Кот Граф садится в свет и мяукает.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "нижняя точка у пола",
+            "крупность": "средний на кота",
+            "статус": "детализация кадра 6"
+          }
+        },
+        {
+          "title": "Сцена 3 · Кадр 6,3",
+          "description": "Входят ноги Луки и Сони рядом с котом графом",
+          "image": "assets/storyboards/generated/scene-03-shot-006-3-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-006-3-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 6,3: рядом с Котом Графом входят ноги Луки и Сони.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "нижняя точка у пола",
+            "крупность": "ноги персонажей и кот",
+            "статус": "детализация кадра 6"
+          }
+        },
+        {
           "title": "Сцена 3 · Кадр 7",
           "description": "Разговорная восьмерка. План на Дмитрия и Колю / В какой-то момент Дима смотрит на шею Коли, но осекается.",
           "image": "assets/storyboards/generated/scene-03-shot-007-storyboard-v1.png",
@@ -475,6 +514,45 @@
             "камера": "план на Дмитрия и Колю",
             "крупность": "средний / средне-крупный",
             "статус": "сцена 3 · первый ИИ-проход"
+          }
+        },
+        {
+          "title": "Сцена 3 · Кадр 7,1",
+          "description": "План на Дмитрия и Колю",
+          "image": "assets/storyboards/generated/scene-03-shot-007-1-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-007-1-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 7,1: разговорный план на Дмитрия и Колю.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "план на Дмитрия и Колю",
+            "крупность": "средний / средне-крупный",
+            "статус": "детализация кадра 7"
+          }
+        },
+        {
+          "title": "Сцена 3 · Кадр 7,2",
+          "description": "В какой-то момент Дима смотрит на шею Коли",
+          "image": "assets/storyboards/generated/scene-03-shot-007-2-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-007-2-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 7,2: Дмитрий смотрит на шею Коли.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "акцент на взгляд Дмитрия",
+            "крупность": "средне-крупный",
+            "статус": "детализация кадра 7"
+          }
+        },
+        {
+          "title": "Сцена 3 · Кадр 7,3",
+          "description": "но осекается",
+          "image": "assets/storyboards/generated/scene-03-shot-007-3-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-03-shot-007-3-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 3, кадр 7,3: Дмитрий осекается и прячет импульс.",
+          "meta": {
+            "тип": "дополнительная раскадровка",
+            "камера": "реакция Дмитрия",
+            "крупность": "средне-крупный",
+            "статус": "детализация кадра 7"
           }
         },
         {
