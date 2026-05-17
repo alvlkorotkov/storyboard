@@ -186,6 +186,71 @@
           }
         },
         {
+          "title": "Сцена 2 · Кадр 3 · готовка сверху · v2",
+          "description": "бобслей. Верхняя точка на руки Коли. Видим процесс готовки.",
+          "image": "assets/storyboards/generated/scene-02-shot-003a-storyboard-v2.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-003a-storyboard-v2.jpg",
+          "alt": "Раскадровка сцены 2, кадр 3 v2: верхняя точка на руки Коли, нарезка зелени и овощей.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "верхняя точка",
+            "крупность": "КП",
+            "статус": "v2 · нарезка"
+          }
+        },
+        {
+          "title": "Сцена 2 · Кадр 3 · готовка сверху · v3",
+          "description": "бобслей. Верхняя точка на руки Коли. Видим процесс готовки.",
+          "image": "assets/storyboards/generated/scene-02-shot-003a-storyboard-v3.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-003a-storyboard-v3.jpg",
+          "alt": "Раскадровка сцены 2, кадр 3 v3: верхняя точка на руки Коли, смешивание соуса или теста в миске.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "верхняя точка",
+            "крупность": "КП",
+            "статус": "v3 · смешивание"
+          }
+        },
+        {
+          "title": "Сцена 2 · Кадр 3 · готовка сверху · v4",
+          "description": "бобслей. Верхняя точка на руки Коли. Видим процесс готовки.",
+          "image": "assets/storyboards/generated/scene-02-shot-003a-storyboard-v4.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-003a-storyboard-v4.jpg",
+          "alt": "Раскадровка сцены 2, кадр 3 v4: верхняя точка на руки Коли, тонкая выкладка маленьких блюд.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "верхняя точка",
+            "крупность": "КП",
+            "статус": "v4 · выкладка"
+          }
+        },
+        {
+          "title": "Сцена 2 · Кадр 3 · готовка сверху · v5",
+          "description": "бобслей. Верхняя точка на руки Коли. Видим процесс готовки.",
+          "image": "assets/storyboards/generated/scene-02-shot-003a-storyboard-v5.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-003a-storyboard-v5.jpg",
+          "alt": "Раскадровка сцены 2, кадр 3 v5: верхняя точка на руки Коли, специя сыплется в блюдо.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "верхняя точка",
+            "крупность": "КП",
+            "статус": "v5 · специя"
+          }
+        },
+        {
+          "title": "Сцена 2 · Кадр 3 · готовка сверху · v6",
+          "description": "бобслей. Верхняя точка на руки Коли. Видим процесс готовки.",
+          "image": "assets/storyboards/generated/scene-02-shot-003a-storyboard-v6.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-003a-storyboard-v6.jpg",
+          "alt": "Раскадровка сцены 2, кадр 3 v6: верхняя точка на руки Коли, финальная сборка тарелок и конфет.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "верхняя точка",
+            "крупность": "КП",
+            "статус": "v6 · финальная сборка"
+          }
+        },
+        {
           "title": "Сцена 2 · Кадр 2 · v1",
           "description": "бобслей. Нижняя точка через стекло на реакцию Коли. / СПЕЦИЯ ЛЕТИТ НА НАС ЧЕРЕЗ СТЕКЛО",
           "image": "assets/storyboards/generated/scene-02-shot-002-storyboard-v1.png",
