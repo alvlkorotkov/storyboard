@@ -242,7 +242,7 @@
       display: grid;
       grid-template-columns: minmax(420px, .47fr) minmax(0, .53fr);
       gap: clamp(24px, 3vw, 42px);
-      align-items: stretch;
+      align-items: start;
       padding: 12px;
       background: #fffaf0;
       border: 1px solid var(--line);
@@ -265,6 +265,7 @@
     }
 
     .storyboard-visual img {
+      display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
@@ -273,43 +274,45 @@
     .frame-info {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       min-width: 0;
-      padding: clamp(10px, 2vw, 28px) clamp(12px, 2vw, 30px) clamp(12px, 2vw, 30px) 0;
+      padding: 0 clamp(12px, 2vw, 30px) clamp(12px, 2vw, 30px) 0;
     }
 
     .frame-info h3 {
       margin: 0 0 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(46px, 5.2vw, 82px);
-      line-height: .9;
+      font-size: clamp(42px, 3.9vw, 72px);
+      line-height: .88;
+      white-space: nowrap;
     }
 
     .frame-info p {
       margin: 0;
       color: #4b433b;
-      font-size: clamp(17px, 1.55vw, 25px);
+      font-size: clamp(16px, 1.28vw, 24px);
       line-height: 1.45;
     }
 
     .frame-meta {
       display: grid;
       gap: 0;
-      margin-top: clamp(28px, 4vw, 44px);
+      margin-top: clamp(24px, 2.8vw, 38px);
     }
 
     .frame-meta div {
       display: flex;
       justify-content: space-between;
       gap: 18px;
-      padding: 13px 0;
+      padding: 11px 0;
       border-bottom: 1px solid var(--line);
       color: #3d362f;
-      font-size: clamp(14px, 1.35vw, 23px);
+      font-size: clamp(13px, 1.14vw, 22px);
       font-weight: 950;
       line-height: 1.35;
       text-transform: uppercase;
       letter-spacing: .04em;
+      white-space: nowrap;
     }
 
     .frame-meta div:first-child {
