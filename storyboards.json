@@ -290,6 +290,32 @@
           }
         },
         {
+          "title": "Сцена 2 · Кадр 2 · v3",
+          "description": "бобслей. Нижняя точка через стекло на реакцию Коли. / СПЕЦИЯ ЛЕТИТ НА НАС ЧЕРЕЗ СТЕКЛО",
+          "image": "assets/storyboards/generated/scene-02-shot-002-storyboard-v3.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-002-storyboard-v3.jpg",
+          "alt": "Раскадровка сцены 2, кадр 2 v3: нижняя точка без стекла, Коля сыплет специю прямо в камеру у миски.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "нижняя точка без стекла",
+            "крупность": "КП",
+            "статус": "v3 · специя в объектив"
+          }
+        },
+        {
+          "title": "Сцена 2 · Кадр 2 · v4",
+          "description": "бобслей. Нижняя точка через стекло на реакцию Коли. / СПЕЦИЯ ЛЕТИТ НА НАС ЧЕРЕЗ СТЕКЛО",
+          "image": "assets/storyboards/generated/scene-02-shot-002-storyboard-v4.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-02-shot-002-storyboard-v4.jpg",
+          "alt": "Раскадровка сцены 2, кадр 2 v4: камера как будто внутри миски, специя летит прямо на зрителя без стекла.",
+          "meta": {
+            "тип": "бобслей готовки",
+            "камера": "нижняя точка из миски",
+            "крупность": "КП",
+            "статус": "v4 · камера внутри миски"
+          }
+        },
+        {
           "title": "Сцена 2 · Кадр заката",
           "description": "КАДР ЗАКАТА - ФУТАЖ",
           "image": "assets/storyboards/generated/scene-02-sunset-footage-storyboard-v1.png",
