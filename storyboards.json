@@ -698,6 +698,304 @@
           }
         }
       ]
+    },
+    {
+      "id": "scene6",
+      "label": "Сцена 6",
+      "frames": [
+        {
+          "title": "Сцена 6 · Кадр 1",
+          "description": "Панорама с Графа на Соню, далее на Дмитрия. Коля за кадром: \"Ха-ха... Вампиры?\". Дмитрий ходит по залу и говорит.",
+          "image": "assets/storyboards/generated/scene-06-shot-001-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-001-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 1: Панорама с Графа на Соню, далее на Дмитрия. Коля за кадром: \"Ха-ха... Вампиры?\". Дмитрий ходит по залу и говорит.",
+          "meta": {
+            "тип": "панорама по залу",
+            "камера": "Граф → Соня → Дмитрий",
+            "крупность": "общий / средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 2",
+          "description": "Общий на Колю. За его спиной картины.",
+          "image": "assets/storyboards/generated/scene-06-shot-002-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-002-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 2: Общий на Колю. За его спиной картины.",
+          "meta": {
+            "тип": "реакция Коли",
+            "камера": "на Колю с картинами",
+            "крупность": "общий план",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 3",
+          "description": "Дмитрий подходит к столу. Максимально приближается к Коле. На фразе \"согласно древнему пророчеству...\" ПНР на Якова, который закатывает глаза. И обратно переброс на Дмитрия.",
+          "image": "assets/storyboards/generated/scene-06-shot-003-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-003-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 3: Дмитрий подходит к столу. Максимально приближается к Коле. На фразе \"согласно древнему пророчеству...\" ПНР на Якова, который закатывает глаза. И обратно переброс на Дмитрия.",
+          "meta": {
+            "тип": "движение давления",
+            "камера": "Дмитрий → Яков → Дмитрий",
+            "крупность": "ПНР / переброс",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 4",
+          "description": "Коля отодвигается от Дмитрия.",
+          "image": "assets/storyboards/generated/scene-06-shot-004-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-004-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 4: Коля отодвигается от Дмитрия.",
+          "meta": {
+            "тип": "реакция / отступление",
+            "камера": "Коля от Дмитрия",
+            "крупность": "средний план",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 5",
+          "description": "Пауза после движения Коли: Дмитрий держит давление, гости наблюдают за столом.",
+          "image": "assets/storyboards/generated/scene-06-shot-005-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-005-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 5: Пауза после движения Коли: Дмитрий держит давление, гости наблюдают за столом.",
+          "meta": {
+            "тип": "переходная пауза",
+            "камера": "стол / напряжение",
+            "крупность": "средний общий",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 6",
+          "description": "ПНР на картину. В кадре 15-20 секунд.",
+          "image": "assets/storyboards/generated/scene-06-shot-006-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-006-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 6: ПНР на картину. В кадре 15-20 секунд.",
+          "meta": {
+            "тип": "портретный hold",
+            "камера": "ПНР на картину",
+            "крупность": "деталь / общий фрагмент",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 7",
+          "description": "Коля ставит руки на стол и говорит: \"Так а я тут при чем\". Яков пытается вскочить и говорит: \"Так уж не знаешь\", Дмитрий его останавливает.",
+          "image": "assets/storyboards/generated/scene-06-shot-007-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-007-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 7: Коля ставит руки на стол и говорит: \"Так а я тут при чем\". Яков пытается вскочить и говорит: \"Так уж не знаешь\", Дмитрий его останавливает.",
+          "meta": {
+            "тип": "конфликт за столом",
+            "камера": "Коля / Яков / Дмитрий",
+            "крупность": "средний общий",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 8",
+          "description": "Крупный на Диму.",
+          "image": "assets/storyboards/generated/scene-06-shot-008-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-008-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 8: Крупный на Диму.",
+          "meta": {
+            "тип": "крупный Дмитрия",
+            "камера": "на Диму",
+            "крупность": "КП",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 9",
+          "description": "Отъезд от крупного Коли на средний. В кадре Коля и Соня.",
+          "image": "assets/storyboards/generated/scene-06-shot-009-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-009-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 9: Отъезд от крупного Коли на средний. В кадре Коля и Соня.",
+          "meta": {
+            "тип": "отъезд",
+            "камера": "от Коли к Коле и Соне",
+            "крупность": "КП → СП",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 10",
+          "description": "Общий план на всех за столом.",
+          "image": "assets/storyboards/generated/scene-06-shot-010-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-010-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 10: Общий план на всех за столом.",
+          "meta": {
+            "тип": "география стола",
+            "камера": "на всех",
+            "крупность": "общий план",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 11",
+          "description": "Восьмерка во время чтения книги.",
+          "image": "assets/storyboards/generated/scene-06-shot-011-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-011-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 11: Восьмерка во время чтения книги.",
+          "meta": {
+            "тип": "восьмерка книги",
+            "камера": "сторона чтения",
+            "крупность": "средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 12",
+          "description": "Восьмерка во время чтения книги.",
+          "image": "assets/storyboards/generated/scene-06-shot-012-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-012-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 12: Восьмерка во время чтения книги.",
+          "meta": {
+            "тип": "восьмерка книги",
+            "камера": "обратная сторона чтения",
+            "крупность": "средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 13",
+          "description": "Крупный на Дмитрия. Появляется на фразе \"И лишь в искреннем раскаянии...\".",
+          "image": "assets/storyboards/generated/scene-06-shot-013-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-013-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 13: Крупный на Дмитрия. Появляется на фразе \"И лишь в искреннем раскаянии...\".",
+          "meta": {
+            "тип": "пророческий акцент",
+            "камера": "на Дмитрия",
+            "крупность": "КП",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 14",
+          "description": "Средний на Якова, Филиппа и Дмитрия.",
+          "image": "assets/storyboards/generated/scene-06-shot-014-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-014-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 14: Средний на Якова, Филиппа и Дмитрия.",
+          "meta": {
+            "тип": "трио за столом",
+            "камера": "Яков / Филипп / Дмитрий",
+            "крупность": "средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 15",
+          "description": "Средний на Колю и Соню.",
+          "image": "assets/storyboards/generated/scene-06-shot-015-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-015-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 15: Средний на Колю и Соню.",
+          "meta": {
+            "тип": "двойной план",
+            "камера": "Коля / Соня",
+            "крупность": "средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 16",
+          "description": "Общий без кота. Яков стучит по столу.",
+          "image": "assets/storyboards/generated/scene-06-shot-016-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-016-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 16: Общий без кота. Яков стучит по столу.",
+          "meta": {
+            "тип": "удар по столу",
+            "камера": "общий без кота",
+            "крупность": "общий план",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 17",
+          "description": "Граф стучит по столу.",
+          "image": "assets/storyboards/generated/scene-06-shot-017-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-017-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 17: Граф стучит по столу.",
+          "meta": {
+            "тип": "ответ Графа",
+            "камера": "на кота у стола",
+            "крупность": "деталь / средний",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 18",
+          "description": "Крупный на раздраженного Якова.",
+          "image": "assets/storyboards/generated/scene-06-shot-018-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-018-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 18: Крупный на раздраженного Якова.",
+          "meta": {
+            "тип": "раздражение Якова",
+            "камера": "на Якова",
+            "крупность": "КП",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 19",
+          "description": "ПНР с Якова и Филиппа на Соню и Колю, далее на крупный план Коли.",
+          "image": "assets/storyboards/generated/scene-06-shot-019-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-019-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 19: ПНР с Якова и Филиппа на Соню и Колю, далее на крупный план Коли.",
+          "meta": {
+            "тип": "панорама к Коле",
+            "камера": "Яков / Филипп → Соня / Коля",
+            "крупность": "ПНР → КП",
+            "статус": "сцена 6 · v1"
+          }
+        },
+        {
+          "title": "Сцена 6 · Кадр 20",
+          "description": "ПНР с Якова, который превращается в вампира, на испуганного Дмитрия.",
+          "image": "assets/storyboards/generated/scene-06-shot-020-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-06-shot-020-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 6, кадр 20: ПНР с Якова, который превращается в вампира, на испуганного Дмитрия.",
+          "meta": {
+            "тип": "превращение",
+            "камера": "Яков → Дмитрий",
+            "крупность": "ПНР",
+            "статус": "сцена 6 · v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Сцена 7",
+      "frames": [
+        {
+          "title": "Сцена 7 · Кадр 1",
+          "description": "Нижняя точка через стекло. Руки Коли: металлическая миска с пастой для запекания конфет, венчик, специи на кончике ножа, случайный порез, капля крови в смесь, перемешивание.",
+          "image": "assets/storyboards/generated/scene-07-shot-001-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-07-shot-001-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 7, кадр 1: руки Коли готовят смесь, добавляют специи, происходит случайный порез и смесь перемешивается.",
+          "meta": {
+            "тип": "кухонный бобслей рук",
+            "камера": "нижняя точка через стекло",
+            "крупность": "руки / деталь",
+            "статус": "сцена 7 · v1"
+          }
+        },
+        {
+          "title": "Сцена 7 · Кадр 2",
+          "description": "Верхняя точка на руки Коли. Он пробует смесь с кончика ножа, злится, после случайного пореза понимает новый вкус, пробует снова, доволен, озирается и надевает перчатки.",
+          "image": "assets/storyboards/generated/scene-07-shot-002-storyboard-v1.png",
+          "thumbnail": "assets/storyboards/thumbnails/scene-07-shot-002-storyboard-v1.jpg",
+          "alt": "Раскадровка сцены 7, кадр 2: верхняя точка на миску, нож, пробу смеси, догадку Коли и перчатки.",
+          "meta": {
+            "тип": "верхняя точка готовки",
+            "камера": "сверху на руки",
+            "крупность": "руки / вставки лица",
+            "статус": "сцена 7 · v1"
+          }
+        }
+      ]
     }
   ]
 }

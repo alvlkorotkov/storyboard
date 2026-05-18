@@ -687,6 +687,8 @@
       <a href="#scene-3">Сцена 3</a>
       <a href="#scene-4">Сцена 4</a>
       <a href="#scene-5">Сцена 5</a>
+      <a href="#scene-6">Сцена 6</a>
+      <a href="#scene-7">Сцена 7</a>
       <a href="#camera">Камера</a>
       <a href="#prompts">Промпты</a>
       <a href="#scenes">Сцены</a>
@@ -802,6 +804,34 @@
         </div>
 
         <div class="storyboard-list" data-storyboard-group="scene5"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-6">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 6</p>
+            <h2>Пророчество за столом.</h2>
+          </div>
+          <p class="lede">Двадцать кадров зала: панорамы через Графа, Соню и Дмитрия, давление на Колю, чтение книги, стол как поле власти и первые признаки хищного срыва.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene6"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-7">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 7</p>
+            <h2>Кухня. Рецепт становится уликой.</h2>
+          </div>
+          <p class="lede">Два сложных кухонных прохода: руки Коли, миска, нож, специи, случайный порез и момент, когда вкус превращается в опасную идею.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene7"></div>
       </div>
     </section>
 
@@ -1034,7 +1064,7 @@
     };
 
     async function initStoryboards() {
-      const response = await fetch("storyboards.json?v=scene-4-5-storyboards");
+      const response = await fetch("storyboards.json?v=scene-6-7-storyboards");
       const data = await response.json();
 
       data.groups.forEach((group) => {
