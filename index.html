@@ -685,6 +685,8 @@
       <a href="#locations">Локации</a>
       <a href="#scene-2">Сцена 2</a>
       <a href="#scene-3">Сцена 3</a>
+      <a href="#scene-4">Сцена 4</a>
+      <a href="#scene-5">Сцена 5</a>
       <a href="#camera">Камера</a>
       <a href="#prompts">Промпты</a>
       <a href="#scenes">Сцены</a>
@@ -772,6 +774,34 @@
         </div>
 
         <div class="storyboard-list" data-storyboard-group="scene3"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-4">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 4</p>
+            <h2>Ритуал бокалов в зале.</h2>
+          </div>
+          <p class="lede">Четыре кадра вокруг овального стола: разлив тёмной жидкости, звон бокала, пробуждение Коли и первый укрупнённый взгляд на вампирскую сторону комнаты.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene4"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-5">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 5</p>
+            <h2>Кабинет. Горячая кружка и допрос.</h2>
+          </div>
+          <p class="lede">Два прохода в кабинете следователя: движение от чайника к столу и давление над Колей, пока бытовая кружка превращается в инструмент сцены.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene5"></div>
       </div>
     </section>
 
@@ -1004,7 +1034,7 @@
     };
 
     async function initStoryboards() {
-      const response = await fetch("storyboards.json?v=scene-3-shot-6-7-breakdowns");
+      const response = await fetch("storyboards.json?v=scene-4-5-storyboards");
       const data = await response.json();
 
       data.groups.forEach((group) => {
