@@ -689,6 +689,8 @@
       <a href="#scene-5">Сцена 5</a>
       <a href="#scene-6">Сцена 6</a>
       <a href="#scene-7">Сцена 7</a>
+      <a href="#scene-8">Сцена 8</a>
+      <a href="#scene-9">Сцена 9</a>
       <a href="#camera">Камера</a>
       <a href="#prompts">Промпты</a>
       <a href="#scenes">Сцены</a>
@@ -832,6 +834,34 @@
         </div>
 
         <div class="storyboard-list" data-storyboard-group="scene7"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-8">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 8</p>
+            <h2>Драка, телефон и новый вкус.</h2>
+          </div>
+          <p class="lede">Двадцать четыре кадра хищного срыва: превращения, стол как поле боя, Граф как комический детонатор, телефон Коли и тихий финальный поворот после драки.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene8"></div>
+      </div>
+    </section>
+
+    <section class="test-frame" id="scene-9">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сцена 9</p>
+            <h2>Кабинет. Конфеты и пустой костюм.</h2>
+          </div>
+          <p class="lede">Шесть кадров полицейского послесловия: восьмёрка, падение следователя, реакция Коли и зеркало, в котором остаётся только костюм.</p>
+        </div>
+
+        <div class="storyboard-list" data-storyboard-group="scene9"></div>
       </div>
     </section>
 
@@ -1064,7 +1094,7 @@
     };
 
     async function initStoryboards() {
-      const response = await fetch("storyboards.json?v=scene-6-7-storyboards");
+      const response = await fetch("storyboards.json?v=scene-8-9-storyboards");
       const data = await response.json();
 
       data.groups.forEach((group) => {
