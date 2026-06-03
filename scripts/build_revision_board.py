@@ -16,6 +16,9 @@ ROOT = Path("/home/korot/projects/storyboard")
 WORKBOOK_PATH = ROOT / "Режиссёрский сценарий - Кулинар Вкус крови_4.xlsx"
 OUTPUT_JSON = ROOT / "revision-board-data.json"
 OUTPUT_IMAGE_DIR = ROOT / "assets" / "revision-board" / "excel"
+GENERATED_IMAGE_MAP = {
+    75: ["assets/revision-board/generated/scene-8-shot-10-ai-v1.png"],
+}
 
 NS = {
     "sheet": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -32,6 +35,7 @@ class ManualNote:
     status: str
     transcript_ranges: tuple[tuple[int, int], ...]
     cleaned_note: str
+    raw_override: str | None = None
 
 
 MANUAL_NOTES: dict[int, ManualNote] = {
@@ -370,6 +374,13 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         cleaned_note=(
             "Добавить отсутствующий крупный insert на ногу Дмитрия и хвост/кота."
         ),
+        raw_override=(
+            "334. [01:29:03.613] — Марина\n"
+            "Спасибо. Десятый кадр. У тебя, по-моему, он тоже был. А, нет, не было. "
+            "Десятый — это крупный на ногу Дмитрия, который наступает на кота.\n"
+            "335. [01:29:15.293] — Раскадровщик\n"
+            "Ок."
+        ),
     ),
     76: ManualNote(
         priority="medium",
@@ -682,9 +693,10 @@ def build_entries() -> list[dict[str, Any]]:
                     "priority": manual.priority,
                     "complexity": manual.complexity,
                     "originalDescription": (row.get("E") or "").strip(),
-                    "rawTranscriptExcerpt": transcript_text(manual.transcript_ranges),
+                    "rawTranscriptExcerpt": manual.raw_override or transcript_text(manual.transcript_ranges),
                     "cleanedDirection": manual.cleaned_note,
                     "excelImages": public_images,
+                    "generatedImages": GENERATED_IMAGE_MAP.get(row_number, []),
                     "sourceSheet": "ОБЩИЙ ДОК",
                     "placeholderLabel": "Место для будущей AI-генерации",
                 }

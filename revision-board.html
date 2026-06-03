@@ -504,6 +504,22 @@
             </div>
           `;
 
+        const generatedImages = (entry.generatedImages || []).length
+          ? entry.generatedImages.map((image, index) => `
+              <figure class="image-block">
+                <img src="${escapeHtml(image)}" alt="${escapeHtml(entry.title)} — AI-генерация ${index + 1}">
+                <figcaption class="image-caption">AI-генерация${(entry.generatedImages || []).length > 1 ? ` · вариант ${index + 1}` : ""}</figcaption>
+              </figure>
+            `).join("")
+          : `
+            <div class="placeholder">
+              <div>
+                <strong>${escapeHtml(entry.placeholderLabel)}</strong>
+                <span>Здесь появится новая AI-генерация для этого кадра.</span>
+              </div>
+            </div>
+          `;
+
         return `
           <article class="card">
             <div class="card-head">
@@ -520,12 +536,7 @@
             <div class="card-body">
               <div class="image-stack">
                 ${images}
-                <div class="placeholder">
-                  <div>
-                    <strong>${escapeHtml(entry.placeholderLabel)}</strong>
-                    <span>Здесь появится новая AI-генерация для этого кадра.</span>
-                  </div>
-                </div>
+                ${generatedImages}
               </div>
               <div class="copy">
                 <section class="copy-block">

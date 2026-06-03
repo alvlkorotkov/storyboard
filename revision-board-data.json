@@ -20,6 +20,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -37,6 +38,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-3.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -54,6 +56,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-5.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -71,6 +74,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-4.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -88,6 +92,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-6.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -105,6 +110,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-1-shot-7.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -122,6 +128,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-2-shot-4.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -139,6 +146,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -156,6 +164,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-2.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -173,6 +182,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-5.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -190,6 +200,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-7.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -207,6 +218,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-8.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -225,6 +237,7 @@
         "assets/revision-board/excel/scene-3-shot-9-ref-1.png",
         "assets/revision-board/excel/scene-3-shot-9-ref-2.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -242,6 +255,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-3-shot-11.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -259,6 +273,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-4-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -276,6 +291,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-4-shot-4.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -293,6 +309,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-5-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -310,6 +327,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-5-shot-2.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -327,6 +345,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -344,6 +363,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-7.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -361,6 +381,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-9.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -378,6 +399,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-11.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -395,6 +417,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-12.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -412,6 +435,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-15.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -429,6 +453,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-19.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -446,6 +471,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-6-shot-20.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -463,6 +489,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -480,6 +507,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-2.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -497,6 +525,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-3.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -514,6 +543,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-4.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -531,6 +561,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-3.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -548,6 +579,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-5.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -565,6 +597,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-6.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -582,6 +615,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-7.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -599,6 +633,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-8.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -616,6 +651,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-9.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -628,10 +664,13 @@
       "priority": "high",
       "complexity": "low",
       "originalDescription": "Дмитрий наступает на хвост кота. ДВА КАДРА - КРУПНЫЙ НА ХВОСТ И ПОТОМ НА КОТА (для ИИ, чтобы не было людей по фонам)",
-      "rawTranscriptExcerpt": "Да, он единственный... Он в единственную чашку, у него одна чашка с тремя чайными пакетиками. Он туда наливает кипяток и расхаживает с этой чашкой по кабинету.\n167. [00:42:24.433] — Раскадровщик",
+      "rawTranscriptExcerpt": "334. [01:29:03.613] — Марина\nСпасибо. Десятый кадр. У тебя, по-моему, он тоже был. А, нет, не было. Десятый — это крупный на ногу Дмитрия, который наступает на кота.\n335. [01:29:15.293] — Раскадровщик\nОк.",
       "cleanedDirection": "Добавить отсутствующий крупный insert на ногу Дмитрия и хвост/кота.",
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-10.png"
+      ],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-10-ai-v1.png"
       ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
@@ -650,6 +689,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-11.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -667,6 +707,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-12.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -684,6 +725,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-7-12-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -701,6 +743,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-13.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -718,6 +761,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-14.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -735,6 +779,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-16.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -752,6 +797,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-shot-17.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -769,6 +815,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-1-shot-1.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -786,6 +833,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-8-1-shot-2.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -803,6 +851,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-9-shot-4.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -820,6 +869,7 @@
       "excelImages": [
         "assets/revision-board/excel/scene-9-shot-5.png"
       ],
+      "generatedImages": [],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     }
