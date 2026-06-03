@@ -19,6 +19,24 @@ OUTPUT_JSON = ROOT / "revision-board-data.json"
 OUTPUT_IMAGE_DIR = ROOT / "assets" / "revision-board" / "excel"
 THUMBNAIL_DIR = ROOT / "assets" / "revision-board" / "thumbnails"
 GENERATED_IMAGE_MAP = {
+    4: [
+        "assets/revision-board/generated/scene-1-shot-1-ai-v1.png",
+    ],
+    6: [
+        "assets/revision-board/generated/scene-1-shot-3-ai-v1.png",
+    ],
+    7: [
+        "assets/revision-board/generated/scene-1-shot-5-ai-v1.png",
+    ],
+    8: [
+        "assets/revision-board/generated/scene-1-shot-4-ai-v1.png",
+    ],
+    9: [
+        "assets/revision-board/generated/scene-1-shot-6-ai-v1.png",
+    ],
+    10: [
+        "assets/revision-board/generated/scene-1-shot-7-ai-v1.png",
+    ],
     75: [
         "assets/revision-board/generated/scene-8-shot-10-ai-v1.png",
         "assets/revision-board/generated/scene-8-shot-10-tail-ai-v1.png",
