@@ -17,7 +17,11 @@ WORKBOOK_PATH = ROOT / "Режиссёрский сценарий - Кулина
 OUTPUT_JSON = ROOT / "revision-board-data.json"
 OUTPUT_IMAGE_DIR = ROOT / "assets" / "revision-board" / "excel"
 GENERATED_IMAGE_MAP = {
-    75: ["assets/revision-board/generated/scene-8-shot-10-ai-v1.png"],
+    75: [
+        "assets/revision-board/generated/scene-8-shot-10-ai-v1.png",
+        "assets/revision-board/generated/scene-8-shot-10-tail-ai-v1.png",
+        "assets/revision-board/generated/scene-8-shot-10-cat-reaction-ai-v1.png",
+    ],
 }
 
 NS = {
