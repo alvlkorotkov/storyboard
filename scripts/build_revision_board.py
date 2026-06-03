@@ -35,6 +35,7 @@ GENERATED_IMAGE_MAP = {
         "assets/revision-board/generated/scene-1-shot-6-ai-v1.png",
     ],
     10: [
+        "assets/revision-board/generated/scene-1-shot-7-ai-v2.png",
         "assets/revision-board/generated/scene-1-shot-7-ai-v1.png",
     ],
     75: [

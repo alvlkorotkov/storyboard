@@ -154,9 +154,11 @@
         "assets/revision-board/thumbnails/excel/scene-1-shot-7.jpg"
       ],
       "generatedImages": [
+        "assets/revision-board/generated/scene-1-shot-7-ai-v2.png",
         "assets/revision-board/generated/scene-1-shot-7-ai-v1.png"
       ],
       "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-1-shot-7-ai-v2.jpg",
         "assets/revision-board/thumbnails/generated/scene-1-shot-7-ai-v1.jpg"
       ],
       "sourceSheet": "ОБЩИЙ ДОК",
