@@ -623,8 +623,12 @@
       "excelThumbnails": [
         "assets/revision-board/thumbnails/excel/scene-8-shot-1.jpg"
       ],
-      "generatedImages": [],
-      "generatedThumbnails": [],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-1-ai-v1.png"
+      ],
+      "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-8-shot-1-ai-v1.jpg"
+      ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -645,8 +649,12 @@
       "excelThumbnails": [
         "assets/revision-board/thumbnails/excel/scene-8-shot-2.jpg"
       ],
-      "generatedImages": [],
-      "generatedThumbnails": [],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-2-ai-v1.png"
+      ],
+      "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-8-shot-2-ai-v1.jpg"
+      ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -667,8 +675,12 @@
       "excelThumbnails": [
         "assets/revision-board/thumbnails/excel/scene-8-shot-3.jpg"
       ],
-      "generatedImages": [],
-      "generatedThumbnails": [],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-3-ai-v1.png"
+      ],
+      "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-8-shot-3-ai-v1.jpg"
+      ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -689,8 +701,12 @@
       "excelThumbnails": [
         "assets/revision-board/thumbnails/excel/scene-8-shot-4.jpg"
       ],
-      "generatedImages": [],
-      "generatedThumbnails": [],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-4-ai-v1.png"
+      ],
+      "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-8-shot-4-ai-v1.jpg"
+      ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
@@ -711,8 +727,12 @@
       "excelThumbnails": [
         "assets/revision-board/thumbnails/excel/scene-8-shot-3.jpg"
       ],
-      "generatedImages": [],
-      "generatedThumbnails": [],
+      "generatedImages": [
+        "assets/revision-board/generated/scene-8-shot-3-stakes-ai-v1.png"
+      ],
+      "generatedThumbnails": [
+        "assets/revision-board/thumbnails/generated/scene-8-shot-3-stakes-ai-v1.jpg"
+      ],
       "sourceSheet": "ОБЩИЙ ДОК",
       "placeholderLabel": "Место для будущей AI-генерации"
     },
