@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import posixpath
 import re
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -16,6 +17,7 @@ ROOT = Path("/home/korot/projects/storyboard")
 WORKBOOK_PATH = ROOT / "Режиссёрский сценарий - Кулинар Вкус крови_4.xlsx"
 OUTPUT_JSON = ROOT / "revision-board-data.json"
 OUTPUT_IMAGE_DIR = ROOT / "assets" / "revision-board" / "excel"
+THUMBNAIL_DIR = ROOT / "assets" / "revision-board" / "thumbnails"
 GENERATED_IMAGE_MAP = {
     75: [
         "assets/revision-board/generated/scene-8-shot-10-ai-v1.png",
@@ -512,6 +514,36 @@ def transcript_text(ranges: tuple[tuple[int, int], ...]) -> str:
     return "\n".join(chunks)
 
 
+def ensure_thumbnail(source_rel: str) -> str:
+    source = ROOT / source_rel
+    category = Path(source_rel).parts[2] if len(Path(source_rel).parts) > 2 else "misc"
+    thumb_dir = THUMBNAIL_DIR / category
+    thumb_dir.mkdir(parents=True, exist_ok=True)
+    thumb_name = f"{Path(source_rel).stem}.jpg"
+    thumb_path = thumb_dir / thumb_name
+
+    if thumb_path.exists() and thumb_path.stat().st_mtime >= source.stat().st_mtime:
+        return str(thumb_path.relative_to(ROOT))
+
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-y",
+            "-i",
+            str(source),
+            "-vf",
+            "scale=960:-1:force_original_aspect_ratio=decrease",
+            "-q:v",
+            "4",
+            str(thumb_path),
+        ],
+        check=True,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    return str(thumb_path.relative_to(ROOT))
+
+
 def cell_text(cell: ET.Element, shared_strings: list[str]) -> str | None:
     value = cell.find("sheet:v", NS)
     if value is None:
@@ -656,6 +688,7 @@ def normalize_shot(shot_value: str) -> str:
 
 def build_entries() -> list[dict[str, Any]]:
     OUTPUT_IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
 
     with ZipFile(WORKBOOK_PATH) as archive:
         shared_strings = parse_shared_strings(archive)
@@ -674,6 +707,7 @@ def build_entries() -> list[dict[str, Any]]:
             shot_slug = slugify(shot_label)
             image_paths = row_images.get(row_number, [])
             public_images: list[str] = []
+            public_image_thumbs: list[str] = []
 
             for index, image_path in enumerate(image_paths, start=1):
                 if image_path not in exported:
@@ -686,6 +720,10 @@ def build_entries() -> list[dict[str, Any]]:
                     destination.write_bytes(archive.read(image_path))
                     exported[image_path] = str(destination.relative_to(ROOT))
                 public_images.append(exported[image_path])
+                public_image_thumbs.append(ensure_thumbnail(exported[image_path]))
+
+            generated_images = GENERATED_IMAGE_MAP.get(row_number, [])
+            generated_thumbs = [ensure_thumbnail(path) for path in generated_images]
 
             entries.append(
                 {
@@ -700,7 +738,9 @@ def build_entries() -> list[dict[str, Any]]:
                     "rawTranscriptExcerpt": manual.raw_override or transcript_text(manual.transcript_ranges),
                     "cleanedDirection": manual.cleaned_note,
                     "excelImages": public_images,
-                    "generatedImages": GENERATED_IMAGE_MAP.get(row_number, []),
+                    "excelThumbnails": public_image_thumbs,
+                    "generatedImages": generated_images,
+                    "generatedThumbnails": generated_thumbs,
                     "sourceSheet": "ОБЩИЙ ДОК",
                     "placeholderLabel": "Место для будущей AI-генерации",
                 }

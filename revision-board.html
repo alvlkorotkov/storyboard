@@ -489,7 +489,9 @@
         const images = entry.excelImages.length
           ? entry.excelImages.map((image, index) => `
               <figure class="image-block">
-                <img src="${escapeHtml(image)}" alt="${escapeHtml(entry.title)} — референс ${index + 1}">
+                <a href="${escapeHtml(image)}" target="_blank" rel="noopener">
+                  <img src="${escapeHtml(entry.excelThumbnails?.[index] || image)}" loading="lazy" decoding="async" alt="${escapeHtml(entry.title)} — референс ${index + 1}">
+                </a>
                 <figcaption class="image-caption">Картинка из Excel${entry.excelImages.length > 1 ? ` · вариант ${index + 1}` : ""}</figcaption>
               </figure>
             `).join("")
@@ -507,7 +509,9 @@
         const generatedImages = (entry.generatedImages || []).length
           ? entry.generatedImages.map((image, index) => `
               <figure class="image-block">
-                <img src="${escapeHtml(image)}" alt="${escapeHtml(entry.title)} — AI-генерация ${index + 1}">
+                <a href="${escapeHtml(image)}" target="_blank" rel="noopener">
+                  <img src="${escapeHtml(entry.generatedThumbnails?.[index] || image)}" loading="lazy" decoding="async" alt="${escapeHtml(entry.title)} — AI-генерация ${index + 1}">
+                </a>
                 <figcaption class="image-caption">AI-генерация${(entry.generatedImages || []).length > 1 ? ` · вариант ${index + 1}` : ""}</figcaption>
               </figure>
             `).join("")
