@@ -30,7 +30,7 @@ class ManualNote:
     priority: str
     complexity: str
     status: str
-    raw_excerpt: str
+    transcript_ranges: tuple[tuple[int, int], ...]
     cleaned_note: str
 
 
@@ -39,11 +39,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "первый кадр первой сцены. У нас идёт отъезд от крупного плана на циферблат... "
-            "в итоге мы выходим на общий план следователя... Коля сидит по обратную сторону стола, "
-            "справа от следователя, как бы на краю стола."
-        ),
+        transcript_ranges=((5, 14),),
         cleaned_note=(
             "Нужен длинный отъезд: макродеталь циферблата -> часы -> стена с рисунком и календарём -> "
             "общий план следователя. Важно правильно показать географию кабинета и посадку Коли на углу стола."
@@ -53,9 +49,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "третий кадр. У нас здесь направление верное, Коля сидит ближе к камере, то есть на углу стола."
-        ),
+        transcript_ranges=((29, 46),),
         cleaned_note=(
             "Сохранить направление, но подчистить географию: Коля должен быть ближе к камере и сидеть на углу стола."
         ),
@@ -64,9 +58,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "пятый кадр, восьмерка, актер, следователь не в кадре. Это как, по сути, чистая восьмерка, без плеча."
-        ),
+        transcript_ranges=((29, 46),),
         cleaned_note=(
             "Сделать чистую восьмёрку на Колю без плеча следователя. Кадр должен ощущаться как POV следователя."
         ),
@@ -75,9 +67,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Четвёртый кадр — то же самое, без плеча. И более крупный на следователя."
-        ),
+        transcript_ranges=((29, 46),),
         cleaned_note=(
             "Сделать более крупный анфасный кадр на следователя, без плеча Коли в кадре."
         ),
@@ -86,10 +76,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужен новый кадр",
-        raw_excerpt=(
-            "Шестой кадр, его просто не было у тебя... это детали интерьера, панорама по кабинету POV Коли... "
-            "мы показываем диван, коробки с документами, мусорное ведро."
-        ),
+        transcript_ranges=((49, 58),),
         cleaned_note=(
             "Добавить отсутствующий кадр: непрерывная POV-панорама Коли по кабинету с ключевыми деталями интерьера."
         ),
@@ -98,9 +85,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="low",
         status="нужно поправить",
-        raw_excerpt=(
-            "седьмой кадр — это укрупнение на следователя... это такой взгляд из-под ноутбука."
-        ),
+        transcript_ranges=((61, 66),),
         cleaned_note=(
             "Крупный кадр на следователя из-под ноутбука. Нижняя полоса в кадре должна читаться как край ноутбука."
         ),
@@ -109,10 +94,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "единственный комментарий по четвёртому кадру... идёт отъезд от крупного плана на Колю в профиль, "
-            "отъезд на его спину... география кадра хорошая, нужно добавить только отъезд."
-        ),
+        transcript_ranges=((77, 94),),
         cleaned_note=(
             "Сцена 2, кадр 4: сохранить географию, но добавить читаемый отъезд от крупного профиля Коли к общему плану со спины."
         ),
@@ -121,9 +103,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="low",
         complexity="low",
         status="под вопросом",
-        raw_excerpt=(
-            "Первый кадр в третьей сцене... мы его, возможно, удалим, пока давай даже не будем его обсуждать."
-        ),
+        transcript_ranges=((93, 96),),
         cleaned_note=(
             "Кадр пока не финализирован: возможен вылет из сцены. Оставлен на доске как спорный."
         ),
@@ -132,10 +112,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Второй кадр третьей сцены... проход мови и отъезд от среднего на общий план... "
-            "направление сбоит, оно должно быть зеркальным."
-        ),
+        transcript_ranges=((97, 118),),
         cleaned_note=(
             "Зеркалить направление движения. Кадр должен быть проходом MOVI с отъездом от среднего к общему, "
             "с входом в зал и видимым столиком в дальнем углу."
@@ -145,11 +122,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Пятый кадр третьей сцены... это вообще самое сложное... "
-            "Коля заканчивает расстановку блюд, переброс на Дмитрия, обратно на Колю, пустое кресло, "
-            "потом Коля идёт к проходу и камера следует за ним."
-        ),
+        transcript_ranges=((117, 166),),
         cleaned_note=(
             "Сложный подвижный кадр с серией перебросок внимания внутри одного прохода: Коля -> Дмитрий -> Коля -> пустое кресло -> "
             "поиск Дмитрия -> движение к проходу. Нужно собрать в одну ясную хореографию."
@@ -159,9 +132,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Седьмой кадр... они у тебя здесь сидят за столом... а на самом деле они находятся все в том же проходе."
-        ),
+        transcript_ranges=((169, 182),),
         cleaned_note=(
             "Разговорная восьмёрка Дмитрия и Коли должна происходить в проходе/на пороге, а не уже за столом."
         ),
@@ -170,10 +141,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Сони и Лука... также находятся... на пороге или в коридоре... "
-            "Коля спрашивает про праздник, Соня делает шаг к Коле, небольшой наезд к Соне."
-        ),
+        transcript_ranges=((183, 206),),
         cleaned_note=(
             "Восьмёрка Сони и Луки тоже остаётся у порога. Нужен маленький наезд к Соне на момент гипноза."
         ),
@@ -182,10 +150,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Девятый кадр... смотрим на тёмный коридор, откуда появляется человек в капюшоне... "
-            "камера отъезжает и потом разворачивается на стол... кот должен быть последним с краю."
-        ),
+        transcript_ranges=((209, 248),),
         cleaned_note=(
             "Собрать длинный вход Якова: из тёмного коридора через стол к посадке. Важно поправить посадку за столом: кот на самом краю."
         ),
@@ -194,9 +159,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Одиннадцатый кадр. Здесь немного не то, здесь другое направление."
-        ),
+        transcript_ranges=((118, 120),),
         cleaned_note=(
             "Крупный на кота оставить по смыслу, но поменять направление камеры."
         ),
@@ -205,9 +168,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый кадр",
-        raw_excerpt=(
-            "Первый кадр четвёртой сцены должен визуально напоминать картину «Тайная вечеря»."
-        ),
+        transcript_ranges=((120, 156),),
         cleaned_note=(
             "Построить общий кадр сцены 4 как оммаж «Тайной вечере» с точной рассадкой всех персонажей."
         ),
@@ -216,9 +177,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="low",
         status="нужно уточнить",
-        raw_excerpt=(
-            "четвертый кадр — укрупнение еще на кого-то, мы не выбрали на кого, пусть будет на Дмитрия."
-        ),
+        transcript_ranges=((155, 156),),
         cleaned_note=(
             "Крупный кадр-пара к Коле. Пока рабочее решение: делать на Дмитрия."
         ),
@@ -227,10 +186,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Пятая сцена... проход мови. Начинаем от крупного на тумбочку и на чашку... "
-            "камера делает разворот против часовой стрелки и провожает следователя."
-        ),
+        transcript_ranges=((158, 170),),
         cleaned_note=(
             "Собрать длинный проход: крупно тумбочка и чашка -> следователь с кружкой -> разворот против часовой стрелки -> выход к Коле."
         ),
@@ -239,10 +195,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Второй кадр... следователь стоит прямо над Колей... потом идет на свое место... "
-            "на 2Б следователь сидит за столом и впервые ест конфету."
-        ),
+        transcript_ranges=((174, 194),),
         cleaned_note=(
             "Построить проход с тремя фазами: наседание на Колю, отход к столу, посадка за стол и первое поедание конфеты."
         ),
@@ -251,10 +204,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "первый кадр... панорама от Кота на Соню и потом на Дмитрия... "
-            "это должно быть другое направление, в котором мы не видим других персонажей рядом с котом."
-        ),
+        transcript_ranges=((196, 204),),
         cleaned_note=(
             "Поменять направление старта панорамы: кот отдельно, без лишних персонажей в первом фрагменте движения."
         ),
@@ -263,9 +213,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "седьмой кадр... не то направление... Коля должен находиться по кадру справа, Яков по кадру слева."
-        ),
+        transcript_ranges=((228, 235),),
         cleaned_note=(
             "Смена оси: Коля справа, Яков слева. Оставить конфликт через стол и убрать лишних людей."
         ),
@@ -274,10 +222,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "девятый кадр... отъезд от крупного Коли, сзади подходит Соня... "
-            "Соня у нас уже стоит за плечом Коли."
-        ),
+        transcript_ranges=((238, 240),),
         cleaned_note=(
             "Нужен отъезд от Коли с выходом на силуэт/фигуру Сони за его плечом."
         ),
@@ -286,10 +231,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Одиннадцатый кадр — это крупный на Луку... небольшая нижняя точка... "
-            "мы вряд ли увидим руки на столе и книгу."
-        ),
+        transcript_ranges=((240, 242),),
         cleaned_note=(
             "Крупный портретный план на Луку с лёгкой нижней точки, без книги и без рук на столе."
         ),
@@ -298,10 +240,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="low",
         status="нужно поправить",
-        raw_excerpt=(
-            "12-й кадр, по сути, то же самое, что было в 9-м кадре... "
-            "видим Колю, и сзади просто силуэт Сони."
-        ),
+        transcript_ranges=((242, 242),),
         cleaned_note=(
             "Кадр повторяет базовую композицию 6.9: Коля в кадре, лицо Сони не видно, только охраняющий силуэт сзади."
         ),
@@ -310,10 +249,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "пятнадцатый кадр... то же самое, что двенадцатый, только чуть общее и с небольшой нижней точки, "
-            "чтобы мы увидели лицо Сони."
-        ),
+        transcript_ranges=((248, 248),),
         cleaned_note=(
             "Сделать чуть более общий повтор композиции 6.12 и открыть лицо Сони, когда Коля поднимает на неё глаза."
         ),
@@ -322,10 +258,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "девятнадцатый кадр... они у тебя сидят друг за другом, а у нас Филипп и Яков сидят по другую сторону от Коли... "
-            "панорама по часовой стрелке от Якова и Филиппа на Соню и Колю."
-        ),
+        transcript_ranges=((252, 254),),
         cleaned_note=(
             "Поправить рассадку и панораму: старт на Якове/Филиппе, затем по часовой стрелке на Соню и Колю."
         ),
@@ -334,10 +267,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "двадцатый кадр... с крупного лица Якова перебрасываемся чуть наверх на той же крупности "
-            "и видим испуганное лицо Дмитрия."
-        ),
+        transcript_ranges=((256, 260),),
         cleaned_note=(
             "Кадр должен работать как переброс с Якова на Дмитрия; Дмитрий не уходит с позиции за Лукой."
         ),
@@ -346,10 +276,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Первый кадр... нейронка не угадала расположение за столом... "
-            "это отъезд от крупной реакции Якова до среднего плана на четверых вампиров."
-        ),
+        transcript_ranges=((264, 270),),
         cleaned_note=(
             "Сцена 8, кадр 1: поправить географию за столом и построить отъезд от лица Якова к группе из четырёх вампиров."
         ),
@@ -358,10 +285,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Во втором кадре не будет перебросок по камере. Это будет просто отъезд фронтальный... "
-            "четыре действия внутри кадра: Дмитрий вталкивается, выталкивает Соню, отталкивает Колю к стене и швыряет Якова под стол."
-        ),
+        transcript_ranges=((280, 290),),
         cleaned_note=(
             "Собрать весь экшен в один фронтальный отъезд без монтажных перебросок: четыре действия читаются последовательно внутри одного прохода."
         ),
@@ -370,9 +294,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "третий кадр... он нарисован хорошо. Единственное, что он чуть крупнее, и за столом у нас не так много людей."
-        ),
+        transcript_ranges=((290, 290),),
         cleaned_note=(
             "Сохранить смысл кадра, но сделать его чуть крупнее и сократить число фигур в фоне."
         ),
@@ -381,10 +303,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "четвертый кадр из-за плеча Дмитрия... Коля у нас не в кадре... Яков под столом, "
-            "к нему подступают с двух сторон Филипп и Соня."
-        ),
+        transcript_ranges=((292, 298),),
         cleaned_note=(
             "Чёткая восьмёрка из-за плеча Дмитрия: Коли нет в кадре, Яков в центре под столом, к нему подступают Соня и Филипп."
         ),
@@ -393,9 +312,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="medium",
         status="нужен новый кадр",
-        raw_excerpt=(
-            "если в третьем кадре это был момент приземления под стол, то здесь он начинает вылезать и хватает ножки стула."
-        ),
+        transcript_ranges=((302, 306),),
         cleaned_note=(
             "Добавить следующий beat после приземления: Яков вылезает из-под стола и хватает ножки стула."
         ),
@@ -404,10 +321,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Пятый кадр — это крупный на Дмитрия... по заднему плану у стены стоит офигевающий Коля. "
-            "Дмитрий смотрит больше в анфас."
-        ),
+        transcript_ranges=((306, 306),),
         cleaned_note=(
             "Крупный анфасный защитный кадр на Дмитрия; в фоне у стены читается растерянный Коля."
         ),
@@ -416,9 +330,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Шестой кадр — это вот прям POV Якова... точка пониже... людей значительно побольше."
-        ),
+        transcript_ranges=((308, 314),),
         cleaned_note=(
             "Опустить камеру ниже, в настоящий POV Якова из-под стола, и добавить недостающих персонажей по географии."
         ),
@@ -427,10 +339,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Седьмой кадр... начинается стенка 3х3... Коля вдалеке, его защищают Дмитрий, Лука и кот, "
-            "напротив стоят Яков, Филипп и Соня. И тут у нас происходит подъезд по камере."
-        ),
+        transcript_ranges=((316, 328),),
         cleaned_note=(
             "Построить профильный кадр-стенку 3х3 с подъездом по камере и большой глубиной пространства."
         ),
@@ -439,9 +348,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Восьмой и девятый — это, соответственно, общие планы на обе стороны... наверное, по пояс."
-        ),
+        transcript_ranges=((330, 332),),
         cleaned_note=(
             "Сделать общий по пояс на сторону Дмитрия/Луки/Графа как пару к следующему общему кадру."
         ),
@@ -450,9 +357,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Восьмой и девятый — это, соответственно, общие планы на обе стороны."
-        ),
+        transcript_ranges=((330, 332),),
         cleaned_note=(
             "Сделать парный общий кадр на противоположную сторону стола."
         ),
@@ -461,9 +366,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="low",
         status="нужен новый кадр",
-        raw_excerpt=(
-            "Десятый — это крупный на ногу Дмитрия, который наступает на кота."
-        ),
+        transcript_ranges=((334, 335),),
         cleaned_note=(
             "Добавить отсутствующий крупный insert на ногу Дмитрия и хвост/кота."
         ),
@@ -472,9 +375,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "11, 12 и 7... они у нас на самом деле анфасные. То есть как POV. Яков летит на камеру."
-        ),
+        transcript_ranges=((336, 336),),
         cleaned_note=(
             "Перевести прыжок Якова в анфасный POV-кадр, где он летит прямо на камеру."
         ),
@@ -483,9 +384,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "11, 12 и 7... они у нас на самом деле анфасные... Дмитрий летит на камеру."
-        ),
+        transcript_ranges=((336, 336),),
         cleaned_note=(
             "Сделать анфасный встречный прыжок Дмитрия на камеру."
         ),
@@ -494,9 +393,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "12.1... это, соответственно, то же самое направление, та же самая крупность, что и в седьмом кадре."
-        ),
+        transcript_ranges=((336, 336),),
         cleaned_note=(
             "Столкновение Дмитрия и Якова держать в той же оси и крупности, что и у профильной стенки 3х3."
         ),
@@ -505,9 +402,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="low",
         complexity="low",
         status="нужно подчистить",
-        raw_excerpt=(
-            "тринадцатый и четырнадцатый кадр. Мне нравится только убрать количество людей."
-        ),
+        transcript_ranges=((336, 338),),
         cleaned_note=(
             "Оставить фехтование Филиппа с вилкой, но почистить фон и лишних людей."
         ),
@@ -516,9 +411,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="low",
         complexity="low",
         status="нужно подчистить",
-        raw_excerpt=(
-            "тринадцатый и четырнадцатый кадр... возможно, мы их объединим в один кадр."
-        ),
+        transcript_ranges=((336, 338),),
         cleaned_note=(
             "Оставить как рабочий дубль боя Луки и Филиппа; позже возможен merge с предыдущим кадром."
         ),
@@ -527,9 +420,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "16-й кадр тут у тебя был со спины. Это кадр на Колю, то есть это реакция Коли крупная."
-        ),
+        transcript_ranges=((340, 340),),
         cleaned_note=(
             "Сделать реакцию Коли крупным планом, а не со спины."
         ),
@@ -538,9 +429,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "В 17-м кадре... в телефон и в камеру прилетает одёжка кота и кот, соответственно. Мы уходим в затемнение."
-        ),
+        transcript_ranges=((342, 342),),
         cleaned_note=(
             "Уточнить конец phone-shot: в камеру летят одежда Графа и сам кот, затем уход в затемнение."
         ),
@@ -549,10 +438,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="medium",
         complexity="medium",
         status="нужно поправить",
-        raw_excerpt=(
-            "Следующий кадр. POV Коли... Тут можно сделать поменьше фаз... "
-            "все вампиры уже без сознания, Коля стоит у стенки и хочет пойти к проходу."
-        ),
+        transcript_ranges=((342, 354),),
         cleaned_note=(
             "Сцена 8-1, кадр 1: POV после драки упростить, сократить лишние фазы и яснее показать маршрут к проходу."
         ),
@@ -561,9 +447,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="low",
         complexity="low",
         status="нужно поправить",
-        raw_excerpt=(
-            "кадр второй... у тебя он в целом хорошо выглядит... Единственное, что Дмитрий у нас лежит."
-        ),
+        transcript_ranges=((353, 354),),
         cleaned_note=(
             "Оставить кадр почти как есть, но уложить Дмитрия в корректную позицию."
         ),
@@ -572,9 +456,7 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="low",
         complexity="low",
         status="нужно поправить",
-        raw_excerpt=(
-            "четвертый... у нас с верхней точки на следователя, следователь лежит на спине."
-        ),
+        transcript_ranges=((712, 722),),
         cleaned_note=(
             "Крупный на следователя сверху, лежащего на спине."
         ),
@@ -583,15 +465,36 @@ MANUAL_NOTES: dict[int, ManualNote] = {
         priority="high",
         complexity="high",
         status="нужен новый проход",
-        raw_excerpt=(
-            "Пятый кадр... проход МОВИ... начинаем с кадра на стол, Коля встает, проходит через стол, "
-            "камера следует за ним, доворачивается на экран, он удаляет протокол и забирает коробку."
-        ),
+        transcript_ranges=((722, 746),),
         cleaned_note=(
             "Собрать подвижный кадр сцены 9: Коля встаёт, обходит стол, удаляет протокол с ноутбука и забирает коробку конфет."
         ),
     ),
 }
+
+
+def extract_transcript_paragraphs(docx_path: Path) -> list[str]:
+    ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
+    with ZipFile(docx_path) as archive:
+        root = ET.fromstring(archive.read("word/document.xml"))
+
+    paragraphs: list[str] = []
+    for paragraph in root.findall(".//w:p", ns):
+        text = "".join((node.text or "") for node in paragraph.findall(".//w:t", ns)).strip()
+        if text:
+            paragraphs.append(text)
+    return paragraphs
+
+
+TRANSCRIPT_PARAGRAPHS = extract_transcript_paragraphs(ROOT / "2026.06.01 по раскадровкам.docx")
+
+
+def transcript_text(ranges: tuple[tuple[int, int], ...]) -> str:
+    chunks: list[str] = []
+    for start, end in ranges:
+        for index in range(start, end + 1):
+            chunks.append(TRANSCRIPT_PARAGRAPHS[index - 1])
+    return "\n".join(chunks)
 
 
 def cell_text(cell: ET.Element, shared_strings: list[str]) -> str | None:
@@ -779,7 +682,7 @@ def build_entries() -> list[dict[str, Any]]:
                     "priority": manual.priority,
                     "complexity": manual.complexity,
                     "originalDescription": (row.get("E") or "").strip(),
-                    "rawTranscriptExcerpt": manual.raw_excerpt,
+                    "rawTranscriptExcerpt": transcript_text(manual.transcript_ranges),
                     "cleanedDirection": manual.cleaned_note,
                     "excelImages": public_images,
                     "sourceSheet": "ОБЩИЙ ДОК",
