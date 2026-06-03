@@ -53,6 +53,21 @@ GENERATED_IMAGE_MAP = {
     69: [
         "assets/revision-board/generated/scene-8-shot-3-stakes-ai-v1.png",
     ],
+    70: [
+        "assets/revision-board/generated/scene-8-shot-5-ai-v1.png",
+    ],
+    71: [
+        "assets/revision-board/generated/scene-8-shot-6-ai-v1.png",
+    ],
+    72: [
+        "assets/revision-board/generated/scene-8-shot-7-ai-v1.png",
+    ],
+    73: [
+        "assets/revision-board/generated/scene-8-shot-8-ai-v1.png",
+    ],
+    74: [
+        "assets/revision-board/generated/scene-8-shot-9-ai-v1.png",
+    ],
     75: [
         "assets/revision-board/generated/scene-8-shot-10-ai-v1.png",
         "assets/revision-board/generated/scene-8-shot-10-tail-ai-v1.png",
